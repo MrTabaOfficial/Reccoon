@@ -64,7 +64,11 @@ Measured on a Ryzen 7 9800X3D with a Radeon RX 9070 XT:
 
 <p align="center">
   <img src="docs/images/sound.png" width="430" alt="Sound page: two HyperX devices, each heard in the video or with an editing track">
-  <img src="docs/images/video.png" width="430" alt="Video page: what to record and the quality, with the recommendation from the 10-second test">
+  <img src="docs/images/video.png" width="430" alt="Video page: what to record, resolution and FPS, with the recommendation from the 10-second test">
+</p>
+
+<p align="center">
+  <img src="docs/images/captures.png" width="430" alt="Captures page: saved videos by month, each with a picture and buttons to trim, compress, show in folder or delete">
 </p>
 
 ## Requirements
