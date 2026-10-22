@@ -7,6 +7,12 @@
 <p align="center"><b>Steals the moment, not your FPS.</b></p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/made%20with-Rust-B7410E?logo=rust&logoColor=white" alt="Made with Rust">
+  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4" alt="Windows 10 and 11">
+  <a href="https://github.com/MrTabaOfficial/Reccoon/releases/latest"><img src="https://img.shields.io/github/v/release/MrTabaOfficial/Reccoon?label=download" alt="Latest version"></a>
+</p>
+
+<p align="center">
 A free screen recorder for Windows that barely touches your PC.<br>
 Built for gamers on CPU-heavy games (GTA RP / FiveM, Rust, Tarkov, modded Minecraft) and on older PCs,
 where other recorders cost frames and cause stutter.
@@ -34,6 +40,30 @@ Measured on a Ryzen 7 9800X3D with a Radeon RX 9070 XT:
 | Recording 1080p 60 fps (HEVC, hardware) | 0.2–0.4 % | 10–15 MB |
 | Waiting in the tray | 0.00 % | 0.6 MB |
 | Shortcut to recording | under 1 s | |
+
+## Built with Rust
+
+Reccoon is written entirely in [Rust](https://www.rust-lang.org), from the capture pipeline to the
+windows: no C++, no Electron, no .NET runtime, no bundled FFmpeg. Rust runs at native speed without a
+garbage collector (so no pauses mid-game), and its compiler rules out most memory and threading bugs
+before the program ever runs.
+
+Under the hood, everything talks to Windows directly through Microsoft's own Rust bindings
+([windows-rs](https://github.com/microsoft/windows-rs)):
+
+| Part | How |
+|---|---|
+| Screen capture | Windows Graphics Capture: a monitor, a region or one window, also when it's covered |
+| Scaling and colour | Direct3D 11 video processor, on the GPU |
+| Video encoding | The graphics card's hardware encoder via Media Foundation (AMD, NVIDIA, Intel): H.264, HEVC or AV1 |
+| MP4 files | Reccoon's own writer: written in pieces while recording (crash-safe), finished into a normal MP4 with chapters and several audio tracks |
+| Sound | WASAPI: whole devices or single apps (process loopback), resampled and mixed in Rust, AAC via Media Foundation |
+| Microphone | Noise suppression with RNNoise ([nnnoiseless](https://github.com/jneem/nnnoiseless), its Rust port) and a noise gate |
+| Shortcuts | Windows' system-wide hotkeys, so they work while a game has focus |
+| Push-to-talk | Raw Input, the way games read keys and mouse buttons; the game still gets them too |
+| Windows and tray | [Slint](https://slint.dev) with its software renderer: no GPU memory for the window, all of it freed when you close it |
+
+The whole app is two programs, `reccoon.exe` and `reccoon-cli.exe`, about 25 MB together.
 
 ## Features
 
