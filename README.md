@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-A free screen recorder for Windows that barely touches your PC.<br>
+A free screen recorder and streaming app for Windows that barely touches your PC.<br>
 Built for gamers on CPU-heavy games (GTA RP / FiveM, Rust, Tarkov, modded Minecraft) and on older PCs,
 where other recorders cost frames and cause stutter.
 </p>
@@ -57,6 +57,8 @@ Under the hood, everything talks to Windows directly through Microsoft's own Rus
 | Scaling and colour | Direct3D 11 video processor, on the GPU |
 | Video encoding | The graphics card's hardware encoder via Media Foundation (AMD, NVIDIA, Intel): H.264, HEVC or AV1 |
 | MP4 files | Reccoon's own writer: written in pieces while recording (crash-safe), finished into a normal MP4 with chapters and several audio tracks |
+| Scenes (Studio) | Reccoon's own compositor on Direct3D 11: every monitor, window or game in a scene captured once, drawn together with pictures and text on the GPU |
+| Live streaming | Reccoon's own RTMP / RTMPS client (TLS from Windows itself), a second hardware encoder at a constant bitrate, reconnecting and lowering the bitrate by itself on a weak connection |
 | Sound | WASAPI: whole devices or single apps (process loopback), resampled and mixed in Rust, AAC via Media Foundation |
 | Microphone | Noise suppression with RNNoise ([nnnoiseless](https://github.com/jneem/nnnoiseless), its Rust port) and a noise gate |
 | Shortcuts | Windows' system-wide hotkeys, so they work while a game has focus |
@@ -67,11 +69,23 @@ The whole app is two programs, `reccoon.exe` and `reccoon-cli.exe`, about 25 MB 
 
 ## Features
 
+- **Two versions in one app,** switched on the About page:
+  - **Classic:** the simple recorder. One button records a monitor, a region you draw or one window.
+  - **Studio:** a scene editor like OBS or Streamlabs. Put monitors, windows, games, pictures and text
+    where you want them, in as many scenes as you like; the scene you're on is what's recorded,
+    replayed and streamed, and you can switch scenes while recording or live.
+- **Live streaming** to YouTube, Twitch, TikTok, or any RTMP / RTMPS server (Kick, Facebook, your
+  own), also while recording, up to 1440p. A weak connection lowers the bitrate instead of freezing,
+  and a dropped one reconnects by itself. Stream keys stay in Windows Credential Manager.
+- **Game capture** that lists only your games, found again when you start the game later. Windows
+  show only what the app draws (no empty title bars).
 - **Quality:** 720p, 1080p, 1440p or 4K (2160p) at 30, 60 or 120 fps, up to what your monitor shows.
   HEVC, H.264, or AV1 on the newest graphics cards; set the bitrate yourself if you like.
   A 10-second test on first start picks the best quality for your PC.
-- **Two versions in one app:** *Low-end PC* keeps everything as light as possible; *High-end PC* adds
-  a blurred-wallpaper look and animations. Switch any time on the About page.
+- **Light by default:** heavier choices (4K, 120 fps) are marked **⚡ strong PC** and warn you if
+  the PC test found them too much for your PC. Nothing you don't use costs anything.
+- **Two looks:** *Simple* (the lightest) or *Fancy* (a blurred copy of your wallpaper and animations),
+  switched any time on the About page.
 - **What to record:** a whole monitor, a region you draw, or one window (even when it's covered). Cursor on or off.
 - **Several sound devices at once:** e.g. HyperX *Game* and *Chat* together, each with a level meter and volume.
 - **Only certain apps:** record the game and Discord but not Spotify.
@@ -90,7 +104,7 @@ The whole app is two programs, `reccoon.exe` and `reccoon-cli.exe`, about 25 MB 
 - **Doctor:** plain-language warnings, e.g. a muted microphone, a nearly full drive, recording to a hard
   disk, a GPU at 100 %.
 - Tray icon (red while recording), shortcuts that work in games, small on-screen messages that never take
-  focus and never show up in recordings.
+  focus and never show up in recordings. Reccoon's own windows stay out of your recordings and streams too.
 
 <p align="center">
   <img src="docs/images/sound.png" width="430" alt="Sound page: two HyperX devices, each heard in the video or with an editing track">
@@ -179,8 +193,13 @@ Settings: `%APPDATA%\Reccoon\settings.json`. Logs: `%LOCALAPPDATA%\Reccoon\logs`
 settings and recordings.
 
 **Does Reccoon send anything to the internet?**
-No. It has no updater, accounts, telemetry or ads, and never uploads your recordings. See
-[PRIVACY.md](PRIVACY.md).
+Only your stream, while you're live, to the server you chose. It has no updater, accounts,
+telemetry or ads, and never uploads your recordings. See [PRIVACY.md](PRIVACY.md).
+
+**How do I stream?**
+Paste your stream key in Settings → Stream (YouTube Studio → Go live → Stream; Twitch dashboard →
+Settings → Stream; TikTok LIVE Producer), then press **Go live**. Classic streams your screen;
+Studio streams the scene you're on.
 
 ## Problems and security
 

@@ -35,7 +35,9 @@ Only the newest release gets security fixes. Please update before reporting.
 
 ## What Reccoon does on your PC
 
-- It never connects to the internet. It has no updater, no accounts, no telemetry and no ads.
+- It connects to the internet only to stream: to the server you chose, from *Go live* until the
+  stream ends, encrypted (RTMPS) where the service offers it. It has no updater, no accounts, no
+  telemetry and no ads. Stream keys are kept in Windows Credential Manager, never in files or logs.
 - It never injects into or reads from other programs or games. It records the screen with Windows'
   own capture API and reads keys only for its shortcuts and push-to-talk.
 - It installs for your user only and needs no administrator rights.
