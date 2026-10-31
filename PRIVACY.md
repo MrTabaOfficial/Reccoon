@@ -21,8 +21,9 @@ Reccoon collects nothing about you.
   only from the devices you chose. The level meters show sound live and keep nothing.
 - **The editor (Studio)** shows the screens in your scene live while it's open, and keeps nothing.
   To list your games it reads the list of games Windows' Game Bar knows on your PC; nothing is sent.
-- **Reccoon's own windows** are kept out of your recordings and streams (and out of screenshots),
-  unless you turn that off in Settings → Saving.
+- **Reccoon's own windows** are kept out of every capture while you record or are live, so your
+  recordings and your stream never show them (or your stream key), unless you turn that off in
+  Settings → Saving.
 - **Instant replay** keeps the last moments in memory or in hidden temporary files that delete
   themselves; nothing is saved unless you press the replay shortcut.
 
