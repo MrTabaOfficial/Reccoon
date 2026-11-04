@@ -87,10 +87,13 @@ platform and quality, and **Go live**.
   your PC, and games from Steam, Epic, Xbox, Riot, GOG, Ubisoft, EA, Rockstar or Battle.net
   folders. If the game isn't running yet, add it anyway: it stays black until you start the
   game, and it's found again every time you restart the game.
+- **Camera…:** your webcam, for example in a corner over the game. It's on only while a scene
+  shows it, in the editor or in a recording or stream, and keeps its own shape. If you plug it
+  into another USB port, it's found again by its name.
 - **Picture…:** a PNG or JPG, for example a logo or a frame.
 - **Text:** a line of text, for example your Discord or a sponsor.
 
-A Screen or Game capture opens its settings straight away. Choose what it shows, then press
+A Screen, Game capture or Camera opens its settings straight away. Choose what it shows, then press
 **Add** (or **Cancel** to add nothing).
 
 On the picture:
@@ -113,6 +116,7 @@ Each item has its own window with everything about it:
 - **Screens:** **Full screen** (choose a monitor) or **Window** (choose a program). ↻ updates
   the list after you open something new.
 - **Games:** the list of running games.
+- **Cameras:** the cameras connected to your PC.
 - **Pictures:** **Change…** picks another file.
 - **Text:** the text, a colour (five swatches or any `#RRGGBB`), and a dark outline that keeps
   it readable on any background. The text is as tall as its box.
@@ -134,9 +138,9 @@ hiding off in **Settings → Saving**.
 ### The mixer
 
 Each sound device and microphone has a level meter and a volume slider. When you record only
-certain apps, the mixer shows those apps instead of the devices. Change volumes before
-you start: while recording or live, the sliders are locked (changes apply to the next
-recording). If a microphone sends only silence, the mixer says *"Silent: muted on the
+certain apps, the mixer shows those apps instead of the devices. Volumes change at once,
+also while you record or are live: the sound glides to the new level, so viewers hear no
+click. Editing tracks always keep the full level. If a microphone sends only silence, the mixer says *"Silent: muted on the
 headset?"*, because a muted headset is the usual reason.
 
 ## Instant replay
@@ -272,6 +276,11 @@ recording or stream that's running.
 Windows 10 marks a window that's being captured with a yellow frame, and apps can't turn it
 off. It's only on your screen, never in the video. Full screen and regions have no frame, and
 Windows 11 never shows it.
+
+**My camera stays black.**
+Another app may be using it (some cameras work with one app at a time), or camera access is off
+for desktop apps: Windows Settings → Privacy & security → Camera → *Let desktop apps access your
+camera*.
 
 **I can't take a screenshot of Reccoon.**
 While you record or are live, Reccoon hides its windows from all captures, screenshots

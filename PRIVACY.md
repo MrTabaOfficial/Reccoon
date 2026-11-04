@@ -19,6 +19,9 @@ Reccoon collects nothing about you.
   store what you type.
 - **Microphone and sound:** recorded only while you record, stream or keep an instant replay, and
   only from the devices you chose. The level meters show sound live and keep nothing.
+- **Camera (Studio):** on only while a scene shows it, in the editor's picture or in what you
+  record or stream. Windows shows that the camera is in use. Nothing from it is kept except in
+  your recordings, and it goes nowhere except your stream.
 - **The editor (Studio)** shows the screens in your scene live while it's open, and keeps nothing.
   To list your games it reads the list of games Windows' Game Bar knows on your PC; nothing is sent.
 - **Reccoon's own windows** are kept out of every capture while you record or are live, so your

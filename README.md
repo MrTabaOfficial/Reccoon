@@ -57,7 +57,7 @@ Under the hood, everything talks to Windows directly through Microsoft's own Rus
 | Scaling and colour | Direct3D 11 video processor, on the GPU |
 | Video encoding | The graphics card's hardware encoder via Media Foundation (AMD, NVIDIA, Intel): H.264, HEVC or AV1 |
 | MP4 files | Reccoon's own writer: written in pieces while recording (crash-safe), finished into a normal MP4 with chapters and several audio tracks |
-| Scenes (Studio) | Reccoon's own compositor on Direct3D 11: every monitor, window or game in a scene captured once, drawn together with pictures and text on the GPU |
+| Scenes (Studio) | Reccoon's own compositor on Direct3D 11: every monitor, window, game or camera in a scene captured once, drawn together with pictures and text on the GPU |
 | Live streaming | Reccoon's own RTMP / RTMPS client (TLS from Windows itself), a second hardware encoder at a constant bitrate, reconnecting and lowering the bitrate by itself on a weak connection |
 | Sound | WASAPI: whole devices or single apps (process loopback), resampled and mixed in Rust, AAC via Media Foundation |
 | Microphone | Noise suppression with RNNoise ([nnnoiseless](https://github.com/jneem/nnnoiseless), its Rust port) and a noise gate |
@@ -71,7 +71,7 @@ The whole app is two programs, `reccoon.exe` and `reccoon-cli.exe`, about 28 MB 
 
 - **Two versions in one app,** switched on the About page:
   - **Classic:** the simple recorder. One button records a monitor, a region you draw or one window.
-  - **Studio:** a scene editor like OBS or Streamlabs. Put monitors, windows, games, pictures and text
+  - **Studio:** a scene editor like OBS or Streamlabs. Put monitors, windows, games, your camera, pictures and text
     where you want them, in as many scenes as you like; the scene you're on is what's recorded,
     replayed and streamed, and you can switch scenes while recording or live.
 - **Live streaming** to YouTube, Twitch, TikTok, or any RTMP / RTMPS server (Kick, Facebook, your
