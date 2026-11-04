@@ -133,7 +133,8 @@ hiding off in **Settings → Saving**.
 
 ### The mixer
 
-Each sound device and microphone has a level meter and a volume slider. Change volumes before
+Each sound device and microphone has a level meter and a volume slider. When you record only
+certain apps, the mixer shows those apps instead of the devices. Change volumes before
 you start: while recording or live, the sliders are locked (changes apply to the next
 recording). If a microphone sends only silence, the mixer says *"Silent: muted on the
 headset?"*, because a muted headset is the usual reason.
@@ -154,7 +155,7 @@ moments are kept → Disk**). Nothing is saved unless you press the shortcut.
 - **Sound devices:** everything you hear on these devices, for example HyperX *Game* and *Chat*
   together. Each has a volume.
 - **Only certain apps:** only the programs you add, for example the game and Discord but not
-  Spotify. An app shows up in the list while it's playing sound.
+  Spotify. An app shows up in the list while it's playing sound. Each app has its own volume.
 
 For each source you choose:
 
