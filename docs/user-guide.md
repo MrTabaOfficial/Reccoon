@@ -268,6 +268,11 @@ as a game: add it with **Screen… → Window** instead.
 The program isn't running or is minimized. It shows again as soon as it's open, also in a
 recording or stream that's running.
 
+**A yellow frame shows around a window I record (Windows 10).**
+Windows 10 marks a window that's being captured with a yellow frame, and apps can't turn it
+off. It's only on your screen, never in the video. Full screen and regions have no frame, and
+Windows 11 never shows it.
+
 **I can't take a screenshot of Reccoon.**
 While you record or are live, Reccoon hides its windows from all captures, screenshots
 included. Stop first, or turn this off in **Settings → Saving**.
