@@ -19,7 +19,7 @@ where other recorders cost frames and cause stutter.
 </p>
 
 <p align="center">
-  <img src="docs/images/home.png" width="720" alt="Reccoon's window: a big Start recording button, what gets recorded, and the last saved recording">
+  <img src="docs/images/home.png" width="720" alt="Reccoon Classic: a big Start recording button, Save instant replay, Go live, what gets recorded, and the last saved recording">
 </p>
 
 ## Why it's light
@@ -38,7 +38,7 @@ Measured on a Ryzen 7 9800X3D with a Radeon RX 9070 XT:
 | | CPU | Memory |
 |---|---|---|
 | Recording 1080p 60 fps (HEVC, hardware) | 0.2–0.4 % | 10–15 MB |
-| Waiting in the tray | 0.00 % | 0.6 MB |
+| Waiting in the tray | 0.00 % | 0.3 MB |
 | Shortcut to recording | under 1 s | |
 
 ## Built with Rust
@@ -65,7 +65,7 @@ Under the hood, everything talks to Windows directly through Microsoft's own Rus
 | Push-to-talk | Raw Input, the way games read keys and mouse buttons; the game still gets them too |
 | Windows and tray | [Slint](https://slint.dev) with its software renderer: no GPU memory for the window, all of it freed when you close it |
 
-The whole app is two programs, `reccoon.exe` and `reccoon-cli.exe`, about 25 MB together.
+The whole app is two programs, `reccoon.exe` and `reccoon-cli.exe`, about 28 MB together.
 
 ## Features
 
@@ -105,6 +105,15 @@ The whole app is two programs, `reccoon.exe` and `reccoon-cli.exe`, about 25 MB 
   disk, a GPU at 100 %.
 - Tray icon (red while recording), shortcuts that work in games, small on-screen messages that never take
   focus and never show up in recordings. Reccoon's own windows stay out of your recordings and streams too.
+
+<p align="center">
+  <img src="docs/images/studio.png" width="720" alt="Reccoon Studio: the scene being recorded and streamed, with its scenes, items and mixer below, and REC and Go live">
+</p>
+
+<p align="center">
+  <img src="docs/images/edit.png" width="300" alt="An item's Edit window: the whole monitor or one window, and its exact place and size">
+  <img src="docs/images/stream.png" width="560" alt="Stream page: YouTube, Twitch, TikTok or a server of your own, the stream key, and the quality">
+</p>
 
 <p align="center">
   <img src="docs/images/sound.png" width="430" alt="Sound page: two HyperX devices, each heard in the video or with an editing track">
