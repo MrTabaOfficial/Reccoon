@@ -142,6 +142,9 @@ Reccoon isn't code-signed yet, so Windows SmartScreen may say *"Windows protecte
 
 ## Using it
 
+The **[user guide](docs/user-guide.md)** explains everything step by step: Classic and Studio,
+the editor, instant replay, sound, streaming, trimming and what to do when something doesn't work.
+
 Opening Reccoon shows its window; closing the window keeps it running in the tray (and when it
 starts with Windows, it waits there). Click the tray icon to open the window; right-click it for a menu.
 
