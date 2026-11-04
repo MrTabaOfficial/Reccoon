@@ -17,9 +17,9 @@ Everything Reccoon does, in the order you'll meet it. For a quick overview, see 
 
 ## Install and first start
 
-1. Download **Reccoon-1.3.0-setup.exe** from the Releases page and run it. It installs for
+1. Download the newest **Reccoon-x.y.z-setup.exe** from the Releases page and run it. It installs for
    your Windows user only, so no administrator rights are needed. You can also tick *Start with
-   Windows*. Prefer no installer? Unzip **Reccoon-1.3.0-portable.zip** anywhere and run
+   Windows*. Prefer no installer? Unzip **Reccoon-x.y.z-portable.zip** anywhere and run
    `reccoon.exe`.
 2. Reccoon isn't code-signed yet, so Windows may show *"Windows protected your PC"*. Click
    **More info**, then **Run anyway**.
