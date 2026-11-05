@@ -238,9 +238,10 @@ picture to play it. The buttons:
   Reccoon warns you if the test found them too much for yours. **Advanced** has:
   - the codec (HEVC, H.264 or AV1): only the ones your graphics card can record are listed
     (AV1 needs a recent one, such as an RTX 40, a Radeon RX 7000 or an Intel Arc);
-  - **FPS in the file:** *Only when something moves* (smaller files; games move all the time, so
-    they're recorded at the full FPS) or *Always full FPS* (exactly the chosen FPS from start to
-    finish, what video editors expect);
+  - **FPS in the file:** *Always full FPS* (the default: exactly the chosen FPS from start to
+    finish, what video editors and FPS counters expect) or *Only when something moves* (a still
+    desktop costs almost nothing, which saves power on a laptop with Instant replay always on;
+    games move all the time, so they're recorded at the full FPS either way);
   - adaptive mode, which records fewer frames for a while when a game needs the whole graphics
     card.
 - **Saving:**
