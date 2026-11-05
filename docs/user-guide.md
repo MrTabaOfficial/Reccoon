@@ -232,7 +232,9 @@ picture to play it. The buttons:
   best quality again. Options marked **⚡ strong PC** (4K, 120 fps) are for strong PCs, and
   Reccoon warns you if the test found them too much for yours. **Advanced** has:
   - the codec (HEVC, H.264 or AV1);
-  - frame timing (skip unchanged frames, or a constant frame rate for some video editors);
+  - **FPS in the file:** *Only when something moves* (smaller files; games move all the time, so
+    they're recorded at the full FPS) or *Always full FPS* (exactly the chosen FPS from start to
+    finish, what video editors expect);
   - adaptive mode, which records fewer frames for a while when a game needs the whole graphics
     card.
 - **Saving:**
