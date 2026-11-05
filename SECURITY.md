@@ -35,9 +35,12 @@ Only the newest release gets security fixes. Please update before reporting.
 
 ## What Reccoon does on your PC
 
-- It connects to the internet only to stream: to the server you chose, from *Go live* until the
-  stream ends, encrypted (RTMPS) where the service offers it. It has no updater, no accounts, no
-  telemetry and no ads. Stream keys are kept in Windows Credential Manager, never in files or logs.
+- It connects to the internet only to stream (to the server you chose, from *Go live* until the
+  stream ends, encrypted with RTMPS where the service offers it) and when you press *Check for
+  updates* on About. Updates come only from this page's releases over HTTPS, and a downloaded setup
+  runs only if its SHA-256 matches the release's `SHA256SUMS.txt`. It never checks by itself, and
+  has no accounts, no telemetry and no ads. Stream keys are kept in Windows Credential Manager,
+  never in files or logs.
 - It never injects into or reads from other programs or games. It records the screen with Windows'
   own capture API and reads keys only for its shortcuts and push-to-talk.
 - It installs for your user only and needs no administrator rights.

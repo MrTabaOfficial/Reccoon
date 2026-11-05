@@ -30,11 +30,12 @@ Closing the window doesn't quit Reccoon. It keeps running in the tray (the racco
 the clock), where it uses no CPU and well under 1 MB of memory. Click the tray icon to open the
 window, and right-click it for a menu (record, go live, trim a video, quit).
 
-Updating: run the new setup over the old one. Your settings and recordings stay.
+Updating: **Settings → About → Check for updates**, then **Download and install**. Or run the new
+setup over the old one. Your settings and recordings stay either way.
 
 ## Classic or Studio
 
-Reccoon is two apps in one. Switch any time in **Settings → About → Version**.
+Reccoon is two apps in one. Switch any time in **Settings → About → Edition**.
 
 - **Classic** is a simple recorder. One button records your whole screen, a region you draw or
   one window. **Go live** streams the same picture.
@@ -77,6 +78,9 @@ platform and quality, and **Go live**.
 - Click the pencil on the shown scene to rename it. Right-click a scene for **Rename**,
   **Duplicate** and **Delete**.
 - Drag a scene up or down to reorder the list.
+- **Transition** under the list: how a switch looks in the recording, replay and stream.
+  **Fade 0.3 s** (the default), 0.5 s or 1 s blends the old scene into the new one; **Cut**
+  switches at once. Moving or editing items in the shown scene always changes it at once.
 
 ### Items
 
@@ -208,7 +212,8 @@ recording keeps its own quality.
 On a weak connection Reccoon lowers the bitrate by itself instead of freezing. If the connection
 drops, it reconnects by itself, for up to two minutes. **End stream** stops it.
 
-Reccoon connects to the internet only while you're live, and only to the server you chose.
+Reccoon connects to the internet only while you're live (only to the server you chose), and when
+you press **Check for updates** on About.
 
 ## Your videos: Captures, trim and compress
 
@@ -231,7 +236,8 @@ picture to play it. The buttons:
 - **Video:** resolution and FPS (up to what your monitor shows), and *Test this PC* to find the
   best quality again. Options marked **⚡ strong PC** (4K, 120 fps) are for strong PCs, and
   Reccoon warns you if the test found them too much for yours. **Advanced** has:
-  - the codec (HEVC, H.264 or AV1);
+  - the codec (HEVC, H.264 or AV1): only the ones your graphics card can record are listed
+    (AV1 needs a recent one, such as an RTX 40, a Radeon RX 7000 or an Intel Arc);
   - **FPS in the file:** *Only when something moves* (smaller files; games move all the time, so
     they're recorded at the full FPS) or *Always full FPS* (exactly the chosen FPS from start to
     finish, what video editors expect);
@@ -245,8 +251,24 @@ picture to play it. The buttons:
   - hiding Reccoon's windows while recording or live;
   - starting with Windows.
 - **Shortcuts:** change any shortcut, or turn it off.
-- **About:** Classic or Studio, and the look: **Simple** (the lightest) or **Fancy** (a blurred
-  copy of your wallpaper behind the window).
+- **Debug**, for finding problems. It shows at the bottom of the menu once you turn on
+  **About → Debug mode** (turning it off also turns its tools off):
+  - **This PC:** your Reccoon version, Windows, graphics card and driver, monitors and encoders.
+    **Copy** puts it on the clipboard for a bug report.
+  - **Logs:** **Open logs**, and **Detailed logging** (much more detail; turn it off afterwards).
+  - **Frame report:** each recording and stream writes what happened to every frame into a text
+    file (**Open reports**): when the game or Windows drew no new picture while things moved,
+    when a frame was dropped, and when the PC was too busy for Reccoon.
+  - **Check a video's FPS:** choose any MP4 (also from other apps or YouTube) and see how many
+    frames each second has, a timeline with the dips in red, and where frames are missing. It
+    reads only the timestamps, so it takes a second.
+  - **Save a support file:** one zip on your desktop with the logs, frame reports, a description
+    of this PC and the settings, to attach to a bug report. Stream keys are never in it.
+- **About:** Classic or Studio, the look (**Simple**, the lightest, or **Fancy**, a blurred copy of
+  your wallpaper behind the window), **Updates** and **Debug mode**.
+  - **Check for updates** asks GitHub for the newest version; Reccoon never checks by itself. If
+    there's one, **Download and install** downloads it, checks it against the release's
+    checksums and installs it; Reccoon closes and opens again. Not while recording or live.
 
 ## Shortcuts
 
@@ -295,6 +317,14 @@ Your microphone sends only silence. Check the mute switch on your headset or its
 Check the stream key in **Settings → Stream** (YouTube and Twitch keys can be reset on their
 sites, and TikTok gives a new server and key every time). On YouTube, a stream must be set
 up in YouTube Studio first.
+
+**The recording stutters now and then.**
+Turn on **Settings → About → Debug mode**, then **Debug → Write a frame report**, record the
+moment again, and open the report (**Open reports**). Lines marked "!" say when and why: *no new picture* means the
+game or Windows drew nothing new (the game itself hitched), *dropped* means the encoder fell
+behind, and *timer woke late* means the PC was too busy. **Check a video's FPS** on the same page
+shows the whole video's timeline. Attach a support file (**Save a support file**) if you ask for
+help.
 
 **The PC test or a recording says a quality is too much.**
 Pick the recommended quality on the Video page, or leave adaptive mode on so games stay smooth.

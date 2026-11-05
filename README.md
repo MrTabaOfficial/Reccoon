@@ -205,7 +205,8 @@ Settings: `%APPDATA%\Reccoon\settings.json`. Logs: `%LOCALAPPDATA%\Reccoon\logs`
 settings and recordings.
 
 **Does Reccoon send anything to the internet?**
-Only your stream, while you're live, to the server you chose. It has no updater, accounts,
+Only your stream, while you're live, to the server you chose, and a question to GitHub for the
+newest version when you press *Check for updates*. It never checks by itself, has no accounts,
 telemetry or ads, and never uploads your recordings. See [PRIVACY.md](PRIVACY.md).
 
 **How do I stream?**

@@ -2,11 +2,14 @@
 
 Reccoon collects nothing about you.
 
-- **The internet only while you're live.** Reccoon connects to one place: the streaming server you
-  chose (YouTube, Twitch, TikTok, or the one you typed in), and only from *Go live* until the
-  stream ends. It sends that server your stream and your stream key, nothing else. Otherwise it
-  never connects: no updater, no accounts, no telemetry, no crash reports, no ads. The *GitHub
-  page* and *Report a problem* buttons only open this page in your browser.
+- **The internet only while you're live, or when you ask for an update.** Reccoon connects to the
+  streaming server you chose (YouTube, Twitch, TikTok, or the one you typed in), only from
+  *Go live* until the stream ends, and sends it your stream and your stream key, nothing else.
+  When you press *Check for updates* on About, it asks GitHub for the newest version (sending only
+  Reccoon's version number), and *Download and install* downloads that version from this page's
+  releases. It never checks by itself. Otherwise it never connects: no accounts, no telemetry, no
+  crash reports, no ads. The *GitHub page* and *Report a problem* buttons only open this page in
+  your browser.
 - **Stream keys** are kept in Windows Credential Manager, protected by your Windows account. They're
   never written to the settings file or the logs.
 - **Your recordings stay on your PC**, in the folder you choose (`Videos\Reccoon` at first).
