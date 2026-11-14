@@ -177,6 +177,9 @@ For each source you choose:
 - **Push-to-talk:** your voice is recorded only while one of your keys or mouse buttons is held
   (*Hold*), or switched on and off with a press (*Toggle*). The keys still work in your game.
   Reccoon keeps a moment before the press and after the release, so no word is cut off.
+  While it's on, an amber note under the microphone (here and in Studio's mixer) names your
+  keys, and the microphone's level bar is grey until you hold one: grey means "heard, but not
+  recorded right now".
 - **Reduce background noise:** removes fans and keyboard clicks.
 - **Mute the microphone when it's quiet:** silence between words stays silent.
 
